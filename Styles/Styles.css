@@ -1,0 +1,151 @@
+/* ===== Resume / Layout Page ===== */
+
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* Fixed header – shorter height on larger screens */
+#layout-header {
+    position: fixed;
+    top: 0;                       
+    left: 0;
+    width: 100%;                  
+
+    background-color: rgb(30, 84, 155);
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding: 10px 0;              /* controls height */
+    z-index: 1000;                
+}
+
+/* Left + right menus – fixed, responsive width (desktop) */
+#left-menu,
+#right-menu {
+    position: fixed;
+    top: 120px;          /* sits below the header */
+    bottom: 0;           /* stretch border all the way down */
+    width: 16%;
+    max-width: 220px;
+    min-width: 140px;
+
+    background-color: white;
+
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* Left menu: only inner vertical border */
+#left-menu {
+    left: 0;
+    border-right: 5px solid gray;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+/* Right menu: only inner vertical border */
+#right-menu {
+    right: 0;
+    border-left: 5px solid gray;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+/* Menu links */
+#left-menu a,
+#right-menu a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#left-menu a:hover,
+#right-menu a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===========================
+   MAIN CONTENT & FOOTER
+   =========================== */
+
+/* Middle content between the menus */
+#layout-main {
+    margin: 140px 20% 40px 20%;   /* top clears header; sides clear menus */
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Footer */
+#layout-footer {
+    background-color: rgb(121, 120, 120);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Top profile picture */
+#top {
+    display: block;
+    margin: 0 auto 20px auto;     /* centered in main content */
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border: 5px solid gray;
+    border-radius: 10px;
+}
+
+/* Family picture – full width of main column */
+#family-pic {
+    display: block;
+    margin: 40px auto 0 auto;
+    max-width: 100%;
+    height: auto;
+    border: 5px solid gray;
+    border-radius: 10px;
+}
+
+
+
+@media (max-width: 900px) {
+
+    /* Header stops being fixed so it doesn't cover content */
+    #layout-header {
+        position: static;
+        font-size: 20px;
+        padding: 8px 0;
+    }
+
+    /* Menus stop being fixed and stack nicely */
+    #left-menu,
+    #right-menu {
+        position: static;         /* no longer fixed */
+        top: auto;
+        bottom: auto;
+        width: 90%;               /* same width both menus */
+        max-width: none;
+        min-width: 0;
+        margin: 10px auto;
+        padding: 20px;
+
+        /* vertical borders on both sides when stacked */
+        border-left: 5px solid gray;
+        border-right: 5px solid gray;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    /* Main content centered under header + menus */
+    #layout-main {
+        margin: 20px auto 40px auto;
+        width: 90%;
+        padding: 20px;
+    }
+}

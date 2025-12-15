@@ -1,0 +1,90 @@
+/* ===== Resume Header ===== */
+
+#resume-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(30, 84, 155);
+    color: white;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    z-index: 1500;
+}
+
+.resume-header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#resume-header-pic {
+    width: 95px;
+    height: 95px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 4px solid white;
+}
+
+#resume-header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+body.resumepage #layout-main {
+    margin: 160px 20% 40px 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ===== Resume Section Spacing ===== */
+
+.resume-section {
+    margin-top: 55px;        /* MORE SPACE BETWEEN SECTIONS */
+    margin-bottom: 55px;
+    scroll-margin-top: 160px;   /* prevents being hidden under header */
+}
+
+.resume-section h2 {
+    margin-bottom: 12px;
+}
+
+.resume-section h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+/* ===== One-line contact row ===== */
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* ===== Responsive Fix ===== */
+
+@media (max-width: 900px) {
+
+    #resume-header {
+        position: static;
+    }
+
+    body.resumepage #left-menu,
+    body.resumepage #right-menu {
+        position: static;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    body.resumepage #layout-main {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

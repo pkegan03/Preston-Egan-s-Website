@@ -1,0 +1,247 @@
+:root {
+    --byu-blue: rgb(30, 84, 155);
+    --byu-dark: #14233d;
+    --byu-light: #f4f6fa;
+    --border-gray: #d1d5de;
+    --text-main: #222222;
+}
+
+/* BASE */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: var(--byu-light);
+    color: var(--text-main);
+}
+
+/* HEADER + NAV */
+.site-header {
+    background-color: var(--byu-blue);
+    color: white;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+/* LOGO BLOCK */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-image {
+    height: 52px;
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.logo-sub {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* NAV LINKS */
+.main-nav a {
+    color: #e9edf7;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.main-nav .active {
+    font-weight: 700;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, var(--byu-blue), var(--byu-dark));
+    color: white;
+    padding: 2.5rem 1rem;
+}
+
+.hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.4rem;
+}
+
+.hero-text p {
+    margin: 0;
+    line-height: 1.7;
+    max-width: 600px;
+    font-size: 1.02rem;
+}
+
+/* secondary logo on right side */
+.hero-logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.secondary-logo {
+    max-width: 160px;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* MAIN WRAPPER */
+.content {
+    max-width: 1100px;
+    margin: 2rem auto 3rem auto;
+    padding: 0 1rem;
+}
+
+/* INTRO */
+.intro h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.intro p {
+    line-height: 1.75;
+    margin-bottom: 2rem;
+}
+
+/* SPORTS GRID */
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+    margin-bottom: 2.5rem;
+}
+
+.sport-card {
+    background-color: #ffffff;
+    border-radius: 14px;
+    border: 1px solid var(--border-gray);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+.sport-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.sport-body {
+    padding: 1.25rem 1.4rem 1.4rem 1.4rem;
+}
+
+.sport-body h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    font-size: 1.3rem;
+    color: var(--byu-blue);
+}
+
+.sport-body p {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    line-height: 1.7;
+    font-size: 0.98rem;
+}
+
+/* PANELS (VIDEO + TABLEAU) */
+.panel {
+    background-color: #ffffff;
+    border-radius: 14px;
+    border: 1px solid var(--border-gray);
+    padding: 1.75rem 1.5rem 2rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.panel h2 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    font-size: 1.4rem;
+    color: var(--byu-blue);
+}
+
+.panel p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    font-size: 0.98rem;
+}
+
+/* EMBED WRAPS */
+.embed-wrapper {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.embed-wrapper.tall {
+    padding-top: 65%;
+}
+
+.embed-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-gray);
+    text-align: center;
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-logo {
+        justify-content: flex-start;
+    }
+}

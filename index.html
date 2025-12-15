@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preston K. Egan — Home</title>
+
+    <!-- Bootstrap -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet">
+
+    <!-- Homepage CSS (no Styles.css here) -->
+    <link rel="stylesheet" href="Styles/home-bootstrap.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Preston K. Egan</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HTML/aboutme.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HTML/Resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HTML/contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HTML/BYUathletics.html">BYU Athletics</a></li>
+                    <li class="nav-item"><a class="nav-link" href="HTML/galaxydestroyer.html">Galaxy Destroyer</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+
+                <!-- TEXT -->
+                <div class="col-lg-6">
+                    <p class="welcome-text text-uppercase">Welcome</p>
+                    <h1 class="display-4 fw-bold mb-3">
+                        Hi, I'm <br>Preston Egan
+                    </h1>
+                    <p class="lead text-dark">
+                        Pre-business student at BYU with experience in leadership,
+                        service, teamwork, and hands-on work. I enjoy building structured web pages,
+                        improving processes, and creating visuals that feel intentional and meaningful.
+                    </p>
+                    <div class="mt-4">
+                        <a href="HTML/Resume.html" class="btn btn-primary btn-lg me-2">View Resume</a>
+                        <a href="HTML/aboutme.html" class="btn btn-outline-primary btn-lg">About Me</a>
+                    </div>
+                </div>
+
+                <!-- PHOTO -->
+                <div class="col-lg-6 text-center">
+                    <img src="Images/solopicture.JPG" class="img-fluid hero-img shadow-lg" alt="Preston Egan">
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- FEATURED SECTION -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Explore the Site</h2>
+            <p class="text-center mb-5 text-muted">
+                Learn more about me, my work, and some projects I’ve created.
+            </p>
+
+            <div class="row g-4">
+
+                <!-- About Me Card -->
+                <div class="col-md-4">
+                    <div class="card custom-card h-100">
+                        <img src="Images/familypicture.JPG" class="card-img-top" alt="Family photo">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">About Me</h5>
+                            <p class="card-text">
+                                Learn more about my background, family, and interests.
+                            </p>
+                            <a href="HTML/aboutme.html" class="btn btn-primary w-100">Go to About Me</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Card -->
+                <div class="col-md-4">
+                    <div class="card custom-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Resume</h5>
+                            <p class="card-text">
+                                Explore my education, work experience, volunteer service, and skills.
+                            </p>
+                            <a href="HTML/Resume.html" class="btn btn-primary w-100">View Resume</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Card -->
+                <div class="col-md-4">
+                    <div class="card custom-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Projects & Extras</h5>
+                            <p class="card-text">
+                                Check out my BYU Athletics visualization page and a custom arcade-style game.
+                            </p>
+                            <a href="HTML/BYUathletics.html" class="btn btn-primary w-100 mb-2">BYU Athletics Page</a>
+                            <a href="HTML/galaxydestroyer.html" class="btn btn-outline-primary w-100">Play Galaxy Destroyer</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-3 text-center footer-custom">
+        <p class="mb-0">© 2025 Preston Egan's Website</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+</html>
